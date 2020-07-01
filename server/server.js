@@ -3,11 +3,11 @@ const express = require('express');
 const app = express();
 const PORT = 5000;
 
-const artistListArray = require('./artist');
+const artistListArray = require('./modules/artist');
 
-const songListArray = require('./song');
+const songListArray = require('./modules/song');
 
-const albumListArray = require('./albums');
+const albumListArray = require('./modules/albums');
 
 app.use(express.static('server/public'));
 
