@@ -11,9 +11,9 @@ function onReady() {
     for (let info of artist) {
       $('#artistTableBody').append(`
                 <tr>
-                    <td>${artist.name}</td>
-                    <td>${artist.born}</td>
-                    <td>${artist.died}</td>
+                    <td>${info.name}</td>
+                    <td>${info.born}</td>
+                    <td>${info.died}</td>
                 </tr>
             `);
     }
