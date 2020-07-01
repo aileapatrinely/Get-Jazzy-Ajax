@@ -7,6 +7,8 @@ const artistListArray = require('./artist');
 
 const songListArray = require('./song');
 
+const albumListArray = require('./albums');
+
 app.use(express.static('server/public'));
 
 app.get('/artist', (req, res) => {
