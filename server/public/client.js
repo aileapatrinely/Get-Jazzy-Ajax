@@ -2,6 +2,8 @@ $(document).ready(onReady);
 
 let artist = [];
 
+let song = [];
+
 function onReady() {
   $.ajax({
     type: 'GET',
@@ -20,4 +22,18 @@ function onReady() {
   });
 
   // TODO Add ajax request for /songs and display on DOM
+  $.ajax({
+    type: 'GET',
+    url: '/song',
+  }).then(function (response) {
+    song = response;
+    for (let info of song) {
+      $('#songTableBody').append(`
+                <tr>
+                    <td>${info.title}</td>
+                    <td>${info.artist}</td>
+                </tr>
+            `);
+    }
+  });
 }
